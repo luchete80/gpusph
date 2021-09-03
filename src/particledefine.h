@@ -57,7 +57,10 @@
 #define	_PARTICLEDEFINE_H
 
 #include "vector_math.h"
+
+#ifdef __GNUC__
 #include "cuda_call.h"
+#endif
 
 #include "common_types.h"
 

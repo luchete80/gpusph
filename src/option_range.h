@@ -39,7 +39,10 @@
 #include <algorithm>
 #include <cstring>
 #include <stdexcept>
+
+#ifdef __GNUC__
 #include <cxxabi.h>
+#endif
 
 #include "cpp11_missing.h"
 

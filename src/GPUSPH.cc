@@ -31,8 +31,11 @@
 
 #include <cfloat> // FLT_EPSILON
 
+#ifdef __GNUC__
 #include <unistd.h> // getpid()
 #include <sys/mman.h> // shm_open()/shm_unlink()
+#endif
+
 #include <fcntl.h> // O_* macros when opening files
 
 #define GPUSPH_MAIN
