@@ -82,7 +82,11 @@ is_in_range(Option const& value)
  */
 template<typename Option>
 constexpr
+#ifdef __GNUC__
 enable_if_t<not option_range<Option>::defined, bool>
+#else
+enable_if_t<!option_range<Option>::defined, bool>
+#endif
 is_in_range(Option const& value)
 {
 	return true;
